@@ -1,7 +1,7 @@
 {
 	"name": "statistica_model",
 	"type": "flogo:activity",
-	"ref": "github.com/jmelville75/Statistica",
+	"ref": "github.com/jmelville75/Statistica/statistica_model",
 	"version": "0.0.1",
 	"title": "Name of model",
 	"description": "My_Model Activity generated from Statistica",
