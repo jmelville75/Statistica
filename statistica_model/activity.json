@@ -3,8 +3,8 @@
 	"type": "flogo:activity",
 	"ref": "github.com/jmelville75/Statistica",
 	"version": "0.0.1",
-	"title": "Name of model",
-	"description": "My_Model Activity generated from Statistica",
+	"title": "statistica_model",
+	"description": "Model generated from Statistica",
 	"homepage": "http://....",
 	"inputs":[
 		{
