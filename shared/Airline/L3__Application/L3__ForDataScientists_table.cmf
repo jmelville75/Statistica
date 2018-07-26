@@ -1,0 +1,423 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="L3_ForDataScientists" path="/shared/Airline/L3_Application/L3_ForDataScientists" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="MinTemp" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="MaxTemp" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="DepTime" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CRSDepTime" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ArrTime" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CRSArrTime" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="UniqueCarrier" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="FlightNum" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TailNum" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ActualElapsedTime" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CRSElapsedTime" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="AirTime" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ArrDelay" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="DepDelay" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Origin" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Dest" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Distance" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TaxiIn" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TaxiOut" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Cancelled" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CancellationCode" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Diverted" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CarrierDelay" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="WeatherDelay" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="NASDelay" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SecurityDelay" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="LateAircraftDelay" nullable="true">
+      <datatype type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="IsArrDelayed" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="IsDepDelayed" nullable="true">
+      <datatype type="STRING" maxLength="16"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Date" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CRSDep_Hour" nullable="true">
+      <datatype type="STRING" maxLength="2"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CRSArr_Hour" nullable="true">
+      <datatype type="STRING" maxLength="2"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Descriptor" nullable="true">
+      <datatype namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="year" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="month" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="day" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/Airline/L2_Cononical/L2_Airline" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MinTemp">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="MaxTemp">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="DepTime">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CRSDepTime">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="ArrTime">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CRSArrTime">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="UniqueCarrier">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="FlightNum">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="TailNum">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="ActualElapsedTime">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CRSElapsedTime">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="AirTime">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="ArrDelay">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="DepDelay">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Origin">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="Dest">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="Distance">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="TaxiIn">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="TaxiOut">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="Cancelled">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="CancellationCode">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="Diverted">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="CarrierDelay">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="WeatherDelay">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="NASDelay">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="SecurityDelay">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="LateAircraftDelay">
+        <datatype type="FLOAT"/>
+      </element>
+      <element name="IsArrDelayed">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="IsDepDelayed">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="Date">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CRSDep_Hour">
+        <datatype type="STRING" maxLength="2"/>
+      </element>
+      <element name="CRSArr_Hour">
+        <datatype type="STRING" maxLength="2"/>
+      </element>
+      <element name="Descriptor">
+        <datatype namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+      </element>
+      <element name="year">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="month">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="day">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    L2_Airline.*
+FROM      
+    /shared/Airline/L2_Cononical/L2_Airline L2_Airline
+WHERE
+    L2_Airline.&quot;year&quot; = 2007</attribute>
+  <attribute name="creationDate" type="LONG">1532621071345</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">0</attribute>
+  <attribute name="impactMessage" type="NULL"/>
+  <attribute name="lastModifiedDate" type="LONG">1532634374760</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAEQUQYBAAoATAAyAF8AQQBpAHIAbABpAG4AZQYCAAoATAAyAF8AQQBpAHIAbABpAG4A
+ZQML/////wMKAACdUwMM/////wsRAAQABgBzAGgAYQByAGUAZAAHAEEAaQByAGwAaQBuAGUADABM
+ADIAXwBDAG8AbgBvAG4AaQBjAGEAbAAKAEwAMgBfAEEAaQByAGwAaQBuAGX//wMFAAAAAAgCEDEG
+Af//AQIBAQYAAQMAAQQAAQUAAwcAAAAACAgQYgYHAAEAPQEFAAgDEEEGAQAEAHkAZQBhAHIGAgAA
+BgP//wYE//8DCv////8IDBAZAxIAAAABBAf/////gAAAAAQGAAAAAH///////wMLAAAAAP//CAQQ
+QwYCAAAKDhAZBgIABwBJAE4AVABFAEcARQBSAxIAAAABBAcAAAAAAAAH1wQGAAAAAAAAB9f//wsH
+1/////8HCQAAAAEAAAAACQoAAAABEEEGAQABACoGAgAABgP//wYE//8DCv////8DCwAAAAD/////
+CQYAAAABEIIDCgAAAMQDCwAAAEQDDAAAAMgDDQAAAnj//wgDEHEDAQAAAAsDAgAAADIJAwAAAiYQ
+dAMGAAAAAP//EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0BgkAEQBMADIAXwBBAGkAcgBsAGkAbgBlAC4AIgB5AGUAYQBy
+ACL//xByBgT/////EHMDBQAAAAD//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+BggAGABMADIAXwBBAGkAcgBsAGkAbgBlAC4AIgB5AGUAYQByACIAIAA9ACAAMgAwADAAN///EHb/
+/xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8Q
+dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///
+EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE
+/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//
+EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//
+EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////
+EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////
+EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3
+Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4
+Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8Q
+dQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/
+////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8Q
+dP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Q
+dv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Q
+dv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8Q
+eQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1
+AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP//
+//8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5
+Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUB
+BwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE////
+/xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT/
+/xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb/
+/xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/
+//////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/
+////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEH
+AP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////
+EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//
+EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//
+EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM
+/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//
+/////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC///
+//8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA
+//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Q
+c///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8Q
+cgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Q
+dv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Q
+dv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////
+////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD/
+/xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz
+//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv///////w==</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1532621071345</attribute>
+</metadata>
