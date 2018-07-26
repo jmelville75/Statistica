@@ -1,0 +1,284 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="xfHolidays" path="/shared/HolidayWebSvc/xfHolidays" type="PROCEDURE" subtype="XSLT_TRANSFORM_PROCEDURE" changeToken="0">
+  <parameters>
+    <parameter name="outputs" direction="OUT" nullable="false">
+      <datatype name="outputs" type="TABLE" refId="1">
+        <element name="Country">
+          <datatype name="VARCHAR" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+        </element>
+        <element name="HolidayCode">
+          <datatype name="VARCHAR" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Descriptor">
+          <datatype name="VARCHAR" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+        </element>
+        <element name="HolidayType">
+          <datatype name="VARCHAR" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+        </element>
+        <element name="DateType">
+          <datatype name="VARCHAR" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+        </element>
+        <element name="BankHoliday">
+          <datatype name="VARCHAR" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Date">
+          <datatype name="TIMESTAMP" type="DATETIME"/>
+        </element>
+        <element name="RelatedHolidayCode">
+          <datatype name="VARCHAR" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="32768"/>
+        </element>
+      </datatype>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/HolidayWebSvc/dsHolidays/getHolidays" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="1">
+      <element name="result" direction="OUT" nullable="unknown">
+        <datatype name="ArrayOfHoliday" namespace="http://www.holidaywebservice.com/HolidayService_v2/" referenceDefinitionSet="/shared/HolidayWebSvc/dsHolidays/getHolidaysDefinitions" referenceType="{http://www.holidaywebservice.com/HolidayService_v2/}ArrayOfHoliday" subType="ELEMENT_DECL" type="XML" contentConstraint="SEQUENCE" schemaConstraint="ANY" componentType="ELEMENT" componentName="{http://www.holidaywebservice.com/HolidayService_v2/}ArrayOfHoliday">
+          <schemaDatatype>
+            <datatype name="ArrayOfHoliday" namespace="http://www.holidaywebservice.com/HolidayService_v2/" superTypeName="anyType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" subType="ELEMENT_DECL" anonymous="true" type="TREE" refId="2">
+              <element name="Holiday" namespace="http://www.holidaywebservice.com/HolidayService_v2/" maxOccurs="2147483647" minOccurs="0">
+                <datatype superTypeName="anyType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" subType="COMPLEX_TYPE" type="TREE" refId="3">
+                  <element name="Country" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                    <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                  </element>
+                  <element name="HolidayCode" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                    <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                  </element>
+                  <element name="Descriptor" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                    <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                  </element>
+                  <element name="HolidayType" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                    <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                  </element>
+                  <element name="DateType" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                    <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                  </element>
+                  <element name="BankHoliday" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                    <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                  </element>
+                  <element name="Date" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                    <datatype name="dateTime" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="DATETIME"/>
+                  </element>
+                  <element name="RelatedHolidayCode" namespace="http://www.holidaywebservice.com/HolidayService_v2/" minOccurs="0">
+                    <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                  </element>
+                </datatype>
+              </element>
+            </datatype>
+          </schemaDatatype>
+        </datatype>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="creationDate" type="LONG">1532614534144</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1532614609128</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1532614534144</attribute>
+  <attribute name="sourcePath" type="STRING">/shared/HolidayWebSvc/dsHolidays/getHolidays</attribute>
+  <attribute name="sourceType" type="SHORT">3</attribute>
+  <attribute name="transformModel" type="STRING">
+&lt;transformModel customized=&quot;false&quot;&gt;
+  &lt;signature&gt;
+    &lt;datatype type=&quot;TREE&quot; refId=&quot;1&quot;&gt;
+      &lt;element name=&quot;inputs&quot;&gt;
+        &lt;datatype name=&quot;inputs&quot; type=&quot;TREE&quot; refId=&quot;2&quot;&gt;
+          &lt;element name=&quot;ArrayOfHoliday&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot; nullable=&quot;false&quot;&gt;
+            &lt;datatype name=&quot;ArrayOfHoliday&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot; referenceDefinitionSet=&quot;/shared/HolidayWebSvc/dsHolidays/getHolidaysDefinitions&quot; referenceType=&quot;{http://www.holidaywebservice.com/HolidayService_v2/}ArrayOfHoliday&quot; subType=&quot;ELEMENT_DECL&quot; type=&quot;XML&quot; contentConstraint=&quot;SEQUENCE&quot; schemaConstraint=&quot;ANY&quot; componentType=&quot;ELEMENT&quot; componentName=&quot;{http://www.holidaywebservice.com/HolidayService_v2/}ArrayOfHoliday&quot;&gt;
+              &lt;schemaDatatype&gt;
+                &lt;datatype name=&quot;ArrayOfHoliday&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot; superTypeName=&quot;anyType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; subType=&quot;ELEMENT_DECL&quot; anonymous=&quot;true&quot; type=&quot;TREE&quot; refId=&quot;3&quot;&gt;
+                  &lt;element name=&quot;Holiday&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot; maxOccurs=&quot;2147483647&quot; minOccurs=&quot;0&quot;&gt;
+                    &lt;datatype superTypeName=&quot;anyType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; subType=&quot;COMPLEX_TYPE&quot; type=&quot;TREE&quot; refId=&quot;4&quot;&gt;
+                      &lt;element name=&quot;Country&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+                        &lt;datatype name=&quot;string&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;2147483647&quot;/&gt;
+                      &lt;/element&gt;
+                      &lt;element name=&quot;HolidayCode&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+                        &lt;datatype name=&quot;string&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;2147483647&quot;/&gt;
+                      &lt;/element&gt;
+                      &lt;element name=&quot;Descriptor&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+                        &lt;datatype name=&quot;string&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;2147483647&quot;/&gt;
+                      &lt;/element&gt;
+                      &lt;element name=&quot;HolidayType&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+                        &lt;datatype name=&quot;string&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;2147483647&quot;/&gt;
+                      &lt;/element&gt;
+                      &lt;element name=&quot;DateType&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+                        &lt;datatype name=&quot;string&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;2147483647&quot;/&gt;
+                      &lt;/element&gt;
+                      &lt;element name=&quot;BankHoliday&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+                        &lt;datatype name=&quot;string&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;2147483647&quot;/&gt;
+                      &lt;/element&gt;
+                      &lt;element name=&quot;Date&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+                        &lt;datatype name=&quot;dateTime&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;DATETIME&quot;/&gt;
+                      &lt;/element&gt;
+                      &lt;element name=&quot;RelatedHolidayCode&quot; namespace=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot; minOccurs=&quot;0&quot;&gt;
+                        &lt;datatype name=&quot;string&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;2147483647&quot;/&gt;
+                      &lt;/element&gt;
+                    &lt;/datatype&gt;
+                  &lt;/element&gt;
+                &lt;/datatype&gt;
+              &lt;/schemaDatatype&gt;
+            &lt;/datatype&gt;
+          &lt;/element&gt;
+        &lt;/datatype&gt;
+      &lt;/element&gt;
+      &lt;element name=&quot;outputs&quot;&gt;
+        &lt;datatype name=&quot;outputs&quot; type=&quot;TREE&quot; refId=&quot;5&quot;&gt;
+          &lt;element name=&quot;outputs&quot;&gt;
+            &lt;datatype name=&quot;outputs&quot; type=&quot;TABLE&quot; refId=&quot;6&quot;&gt;
+              &lt;element name=&quot;Country&quot;&gt;
+                &lt;datatype name=&quot;VARCHAR&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;32768&quot;/&gt;
+              &lt;/element&gt;
+              &lt;element name=&quot;HolidayCode&quot;&gt;
+                &lt;datatype name=&quot;VARCHAR&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;32768&quot;/&gt;
+              &lt;/element&gt;
+              &lt;element name=&quot;Descriptor&quot;&gt;
+                &lt;datatype name=&quot;VARCHAR&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;32768&quot;/&gt;
+              &lt;/element&gt;
+              &lt;element name=&quot;HolidayType&quot;&gt;
+                &lt;datatype name=&quot;VARCHAR&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;32768&quot;/&gt;
+              &lt;/element&gt;
+              &lt;element name=&quot;DateType&quot;&gt;
+                &lt;datatype name=&quot;VARCHAR&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;32768&quot;/&gt;
+              &lt;/element&gt;
+              &lt;element name=&quot;BankHoliday&quot;&gt;
+                &lt;datatype name=&quot;VARCHAR&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;32768&quot;/&gt;
+              &lt;/element&gt;
+              &lt;element name=&quot;Date&quot;&gt;
+                &lt;datatype name=&quot;TIMESTAMP&quot; type=&quot;DATETIME&quot;/&gt;
+              &lt;/element&gt;
+              &lt;element name=&quot;RelatedHolidayCode&quot;&gt;
+                &lt;datatype name=&quot;VARCHAR&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot; superTypeName=&quot;anySimpleType&quot; superTypeNamespace=&quot;http://www.w3.org/2001/XMLSchema&quot; type=&quot;STRING&quot; maxLength=&quot;32768&quot;/&gt;
+              &lt;/element&gt;
+            &lt;/datatype&gt;
+          &lt;/element&gt;
+        &lt;/datatype&gt;
+      &lt;/element&gt;
+    &lt;/datatype&gt;
+  &lt;/signature&gt;
+  &lt;xslt&gt;
+&amp;lt;xslt:stylesheet version=&amp;quot;2.0&amp;quot; xmlns:csw-xform=&amp;quot;http://www.compositesw.com/2003/xform&amp;quot; xmlns:ns1=&amp;quot;http://www.holidaywebservice.com/HolidayService_v2/&amp;quot; xmlns:xs=&amp;quot;http://www.w3.org/2001/XMLSchema&amp;quot; xmlns:xslt=&amp;quot;http://www.w3.org/1999/XSL/Transform&amp;quot;&amp;gt;
+  &amp;lt;xslt:template match=&amp;quot;/&amp;quot;&amp;gt;
+    &amp;lt;xslt:variable name=&amp;quot;_Country&amp;quot;/&amp;gt;
+    &amp;lt;xslt:variable name=&amp;quot;_HolidayCode&amp;quot;/&amp;gt;
+    &amp;lt;xslt:variable name=&amp;quot;_Descriptor&amp;quot;/&amp;gt;
+    &amp;lt;xslt:variable name=&amp;quot;_HolidayType&amp;quot;/&amp;gt;
+    &amp;lt;xslt:variable name=&amp;quot;_DateType&amp;quot;/&amp;gt;
+    &amp;lt;xslt:variable name=&amp;quot;_BankHoliday&amp;quot;/&amp;gt;
+    &amp;lt;xslt:variable name=&amp;quot;_Date&amp;quot;/&amp;gt;
+    &amp;lt;xslt:variable name=&amp;quot;_RelatedHolidayCode&amp;quot;/&amp;gt;
+    &amp;lt;xslt:element name=&amp;quot;results&amp;quot;&amp;gt;
+      &amp;lt;xslt:for-each select=&amp;quot;ns1:ArrayOfHoliday&amp;quot;&amp;gt;
+        &amp;lt;xslt:for-each select=&amp;quot;ns1:Holiday&amp;quot;&amp;gt;
+          &amp;lt;xslt:variable name=&amp;quot;_Country&amp;quot; select=&amp;quot;ns1:Country&amp;quot;/&amp;gt;
+          &amp;lt;xslt:variable name=&amp;quot;_HolidayCode&amp;quot; select=&amp;quot;ns1:HolidayCode&amp;quot;/&amp;gt;
+          &amp;lt;xslt:variable name=&amp;quot;_Descriptor&amp;quot; select=&amp;quot;ns1:Descriptor&amp;quot;/&amp;gt;
+          &amp;lt;xslt:variable name=&amp;quot;_HolidayType&amp;quot; select=&amp;quot;ns1:HolidayType&amp;quot;/&amp;gt;
+          &amp;lt;xslt:variable name=&amp;quot;_DateType&amp;quot; select=&amp;quot;ns1:DateType&amp;quot;/&amp;gt;
+          &amp;lt;xslt:variable name=&amp;quot;_BankHoliday&amp;quot; select=&amp;quot;ns1:BankHoliday&amp;quot;/&amp;gt;
+          &amp;lt;xslt:variable name=&amp;quot;_Date&amp;quot; select=&amp;quot;ns1:Date&amp;quot;/&amp;gt;
+          &amp;lt;xslt:variable name=&amp;quot;_RelatedHolidayCode&amp;quot; select=&amp;quot;ns1:RelatedHolidayCode&amp;quot;/&amp;gt;
+          &amp;lt;xslt:element name=&amp;quot;result&amp;quot;&amp;gt;
+            &amp;lt;xslt:element name=&amp;quot;Country&amp;quot;&amp;gt;
+              &amp;lt;xslt:value-of select=&amp;quot;$_Country&amp;quot;/&amp;gt;
+            &amp;lt;/xslt:element&amp;gt;
+            &amp;lt;xslt:element name=&amp;quot;HolidayCode&amp;quot;&amp;gt;
+              &amp;lt;xslt:value-of select=&amp;quot;$_HolidayCode&amp;quot;/&amp;gt;
+            &amp;lt;/xslt:element&amp;gt;
+            &amp;lt;xslt:element name=&amp;quot;Descriptor&amp;quot;&amp;gt;
+              &amp;lt;xslt:value-of select=&amp;quot;$_Descriptor&amp;quot;/&amp;gt;
+            &amp;lt;/xslt:element&amp;gt;
+            &amp;lt;xslt:element name=&amp;quot;HolidayType&amp;quot;&amp;gt;
+              &amp;lt;xslt:value-of select=&amp;quot;$_HolidayType&amp;quot;/&amp;gt;
+            &amp;lt;/xslt:element&amp;gt;
+            &amp;lt;xslt:element name=&amp;quot;DateType&amp;quot;&amp;gt;
+              &amp;lt;xslt:value-of select=&amp;quot;$_DateType&amp;quot;/&amp;gt;
+            &amp;lt;/xslt:element&amp;gt;
+            &amp;lt;xslt:element name=&amp;quot;BankHoliday&amp;quot;&amp;gt;
+              &amp;lt;xslt:value-of select=&amp;quot;$_BankHoliday&amp;quot;/&amp;gt;
+            &amp;lt;/xslt:element&amp;gt;
+            &amp;lt;xslt:element name=&amp;quot;Date&amp;quot;&amp;gt;
+              &amp;lt;xslt:value-of select=&amp;quot;$_Date&amp;quot;/&amp;gt;
+            &amp;lt;/xslt:element&amp;gt;
+            &amp;lt;xslt:element name=&amp;quot;RelatedHolidayCode&amp;quot;&amp;gt;
+              &amp;lt;xslt:value-of select=&amp;quot;$_RelatedHolidayCode&amp;quot;/&amp;gt;
+            &amp;lt;/xslt:element&amp;gt;
+          &amp;lt;/xslt:element&amp;gt;
+        &amp;lt;/xslt:for-each&amp;gt;
+      &amp;lt;/xslt:for-each&amp;gt;
+    &amp;lt;/xslt:element&amp;gt;
+  &amp;lt;/xslt:template&amp;gt;
+&amp;lt;/xslt:stylesheet&amp;gt;&lt;/xslt&gt;
+  &lt;links&gt;
+    &lt;link source=&quot;/inputs/ArrayOfHoliday/Holiday/BankHoliday&quot; target=&quot;/outputs/outputs/BankHoliday&quot;/&gt;
+    &lt;link source=&quot;/inputs/ArrayOfHoliday/Holiday/Date&quot; target=&quot;/outputs/outputs/Date&quot;/&gt;
+    &lt;link source=&quot;/inputs/ArrayOfHoliday/Holiday/HolidayCode&quot; target=&quot;/outputs/outputs/HolidayCode&quot;/&gt;
+    &lt;link source=&quot;/inputs/ArrayOfHoliday/Holiday/HolidayType&quot; target=&quot;/outputs/outputs/HolidayType&quot;/&gt;
+    &lt;link source=&quot;/inputs/ArrayOfHoliday/Holiday/RelatedHolidayCode&quot; target=&quot;/outputs/outputs/RelatedHolidayCode&quot;/&gt;
+    &lt;link source=&quot;/inputs/ArrayOfHoliday/Holiday/DateType&quot; target=&quot;/outputs/outputs/DateType&quot;/&gt;
+    &lt;link source=&quot;/inputs/ArrayOfHoliday/Holiday/Country&quot; target=&quot;/outputs/outputs/Country&quot;/&gt;
+    &lt;link source=&quot;/inputs/ArrayOfHoliday/Holiday/Descriptor&quot; target=&quot;/outputs/outputs/Descriptor&quot;/&gt;
+  &lt;/links&gt;
+&lt;/transformModel&gt;</attribute>
+  <attribute name="xqueryModel" type="NULL"/>
+  <attribute name="xslt" type="STRING">
+&lt;xslt:stylesheet version=&quot;2.0&quot; xmlns:csw-xform=&quot;http://www.compositesw.com/2003/xform&quot; xmlns:ns1=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xslt=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+  &lt;xslt:template match=&quot;/&quot;&gt;
+    &lt;xslt:variable name=&quot;_Country&quot;/&gt;
+    &lt;xslt:variable name=&quot;_HolidayCode&quot;/&gt;
+    &lt;xslt:variable name=&quot;_Descriptor&quot;/&gt;
+    &lt;xslt:variable name=&quot;_HolidayType&quot;/&gt;
+    &lt;xslt:variable name=&quot;_DateType&quot;/&gt;
+    &lt;xslt:variable name=&quot;_BankHoliday&quot;/&gt;
+    &lt;xslt:variable name=&quot;_Date&quot;/&gt;
+    &lt;xslt:variable name=&quot;_RelatedHolidayCode&quot;/&gt;
+    &lt;xslt:element name=&quot;results&quot;&gt;
+      &lt;xslt:for-each select=&quot;ns1:ArrayOfHoliday&quot;&gt;
+        &lt;xslt:for-each select=&quot;ns1:Holiday&quot;&gt;
+          &lt;xslt:variable name=&quot;_Country&quot; select=&quot;ns1:Country&quot;/&gt;
+          &lt;xslt:variable name=&quot;_HolidayCode&quot; select=&quot;ns1:HolidayCode&quot;/&gt;
+          &lt;xslt:variable name=&quot;_Descriptor&quot; select=&quot;ns1:Descriptor&quot;/&gt;
+          &lt;xslt:variable name=&quot;_HolidayType&quot; select=&quot;ns1:HolidayType&quot;/&gt;
+          &lt;xslt:variable name=&quot;_DateType&quot; select=&quot;ns1:DateType&quot;/&gt;
+          &lt;xslt:variable name=&quot;_BankHoliday&quot; select=&quot;ns1:BankHoliday&quot;/&gt;
+          &lt;xslt:variable name=&quot;_Date&quot; select=&quot;ns1:Date&quot;/&gt;
+          &lt;xslt:variable name=&quot;_RelatedHolidayCode&quot; select=&quot;ns1:RelatedHolidayCode&quot;/&gt;
+          &lt;xslt:element name=&quot;result&quot;&gt;
+            &lt;xslt:element name=&quot;Country&quot;&gt;
+              &lt;xslt:value-of select=&quot;$_Country&quot;/&gt;
+            &lt;/xslt:element&gt;
+            &lt;xslt:element name=&quot;HolidayCode&quot;&gt;
+              &lt;xslt:value-of select=&quot;$_HolidayCode&quot;/&gt;
+            &lt;/xslt:element&gt;
+            &lt;xslt:element name=&quot;Descriptor&quot;&gt;
+              &lt;xslt:value-of select=&quot;$_Descriptor&quot;/&gt;
+            &lt;/xslt:element&gt;
+            &lt;xslt:element name=&quot;HolidayType&quot;&gt;
+              &lt;xslt:value-of select=&quot;$_HolidayType&quot;/&gt;
+            &lt;/xslt:element&gt;
+            &lt;xslt:element name=&quot;DateType&quot;&gt;
+              &lt;xslt:value-of select=&quot;$_DateType&quot;/&gt;
+            &lt;/xslt:element&gt;
+            &lt;xslt:element name=&quot;BankHoliday&quot;&gt;
+              &lt;xslt:value-of select=&quot;$_BankHoliday&quot;/&gt;
+            &lt;/xslt:element&gt;
+            &lt;xslt:element name=&quot;Date&quot;&gt;
+              &lt;xslt:value-of select=&quot;$_Date&quot;/&gt;
+            &lt;/xslt:element&gt;
+            &lt;xslt:element name=&quot;RelatedHolidayCode&quot;&gt;
+              &lt;xslt:value-of select=&quot;$_RelatedHolidayCode&quot;/&gt;
+            &lt;/xslt:element&gt;
+          &lt;/xslt:element&gt;
+        &lt;/xslt:for-each&gt;
+      &lt;/xslt:for-each&gt;
+    &lt;/xslt:element&gt;
+  &lt;/xslt:template&gt;
+&lt;/xslt:stylesheet&gt;</attribute>
+</metadata>

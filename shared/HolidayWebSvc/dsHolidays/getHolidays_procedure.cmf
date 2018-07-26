@@ -1,0 +1,61 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="getHolidays" path="/shared/HolidayWebSvc/dsHolidays/getHolidays" type="PROCEDURE" subtype="OPERATION" changeToken="0">
+  <parameters>
+    <parameter name="result" direction="OUT" nullable="unknown">
+      <datatype name="ArrayOfHoliday" namespace="http://www.holidaywebservice.com/HolidayService_v2/" referenceDefinitionSet="/shared/HolidayWebSvc/dsHolidays/getHolidaysDefinitions" referenceType="{http://www.holidaywebservice.com/HolidayService_v2/}ArrayOfHoliday" subType="ELEMENT_DECL" type="XML" contentConstraint="SEQUENCE" schemaConstraint="ANY" componentType="ELEMENT" componentName="{http://www.holidaywebservice.com/HolidayService_v2/}ArrayOfHoliday">
+        <schemaDatatype>
+          <datatype name="ArrayOfHoliday" namespace="http://www.holidaywebservice.com/HolidayService_v2/" superTypeName="anyType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" subType="ELEMENT_DECL" anonymous="true" type="TREE" refId="1">
+            <element name="Holiday" namespace="http://www.holidaywebservice.com/HolidayService_v2/" maxOccurs="2147483647" minOccurs="0">
+              <datatype superTypeName="anyType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" subType="COMPLEX_TYPE" type="TREE" refId="2">
+                <element name="Country" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                  <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                </element>
+                <element name="HolidayCode" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                  <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                </element>
+                <element name="Descriptor" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                  <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                </element>
+                <element name="HolidayType" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                  <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                </element>
+                <element name="DateType" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                  <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                </element>
+                <element name="BankHoliday" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                  <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                </element>
+                <element name="Date" namespace="http://www.holidaywebservice.com/HolidayService_v2/">
+                  <datatype name="dateTime" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="DATETIME"/>
+                </element>
+                <element name="RelatedHolidayCode" namespace="http://www.holidaywebservice.com/HolidayService_v2/" minOccurs="0">
+                  <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                </element>
+              </datatype>
+            </element>
+          </datatype>
+        </schemaDatatype>
+      </datatype>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/HolidayWebSvc/dsHolidays/getHolidaysDefinitions" type="DEFINITION_SET">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <attribute name="bindingModel" type="STRING">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;&lt;bindingModel&gt;&lt;portBindings&gt;&lt;portBinding xsi:type=&quot;restfulPortBinding&quot; serviceName=&quot;getHolidays&quot; jsonWrappedTable=&quot;true&quot; jsonWrappedCursor=&quot;true&quot; jsonUseProcParamName=&quot;false&quot; enabled=&quot;false&quot; bindingStyles=&quot;&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;operationBindings&gt;&lt;operationBinding xsi:type=&quot;restfulProcedureBinding&quot; operationPathTemplate=&quot;&quot; httpMethod=&quot;GET&quot; resourceName=&quot;getHolidays&quot; requestWrapperQName=&quot;&quot; parameterStyle=&quot;BARE&quot; responseWrapperQName=&quot;&quot;&gt;&lt;parameterBindings&gt;&lt;parameterBinding xsi:type=&quot;restfulParameterBinding&quot; xml=&quot;false&quot; parameterFormat=&quot;JSON&quot; nulLable=&quot;false&quot; bindingLocation=&quot;entity&quot; name=&quot;result&quot; definitionName=&quot;ArrayOfHoliday&quot; dataType=&quot;DEFINITION&quot; inOut=&quot;OUT&quot; definitionStr=&quot;shared/HolidayWebSvc/dsHolidays/getHolidaysDefinitions/&amp;quot;{http://www.holidaywebservice.com/HolidayService_v2/}ArrayOfHoliday&amp;quot;&quot; location=&quot;Body&quot; isUrl=&quot;false&quot;/&gt;&lt;/parameterBindings&gt;&lt;/operationBinding&gt;&lt;/operationBindings&gt;&lt;/portBinding&gt;&lt;/portBindings&gt;&lt;/bindingModel&gt;</attribute>
+  <attribute name="creationDate" type="LONG">1532614076158</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="execTimeout" type="LONG">0</attribute>
+  <attribute name="httpLocation" type="STRING">http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx/GetHolidaysForDateRange?countryCode=UnitedStates&amp;startDate=1/1/2007&amp;endDate=12/31/2008</attribute>
+  <attribute name="httpVerb" type="STRING">GET</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1532631867277</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1532614076158</attribute>
+  <attribute name="timeout" type="LONG">0</attribute>
+</metadata>
