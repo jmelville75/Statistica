@@ -72,7 +72,12 @@
   <foreignKeys></foreignKeys>
   <security>
     <owner user="admin" domain="composite"/>
+    <privilege user="datascientist" domain="composite" privileges="READ SELECT GRANT"/>
+    <privilege user="businessuser" domain="composite" privileges="READ SELECT GRANT"/>
   </security>
+  <dependency target="/policy/cbs/maskTail" type="POLICY">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
   <dependency target="/shared/Airline/L2_Cononical/L2_Airline" type="TABLE">
     <datatype type="TABLE" refId="1">
       <element name="MinTemp">
@@ -185,6 +190,9 @@
       </element>
     </datatype>
   </dependency>
+  <dependency target="/shared/LateArrivals" type="PROCEDURE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
   <attribute name="SQL" type="STRING">SELECT 
     L2_Airline.ArrDelay, 
     L2_Airline.TailNum, 
@@ -201,6 +209,7 @@ FROM
     /shared/Airline/L2_Cononical/L2_Airline L2_Airline
 WHERE
     L2_Airline.&quot;year&quot; = 2008</attribute>
+  <attribute name="cbs_assignment" type="STRING">{&quot;assignments&quot;:{&quot;entry&quot;:{&quot;key&quot;:&quot;tailnum&quot;,&quot;value&quot;:{&quot;columnName&quot;:&quot;TailNum&quot;,&quot;policyPath&quot;:&quot;/policy/cbs/maskTail&quot;,&quot;resourcePath&quot;:&quot;/shared/Airline/L3_Application/L3_ForDeployment&quot;,&quot;resourceType&quot;:&quot;TABLE&quot;}}}}</attribute>
   <attribute name="creationDate" type="LONG">1532621119578</attribute>
   <attribute name="creatorUserDomain" type="STRING">composite</attribute>
   <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
@@ -208,7 +217,7 @@ WHERE
   <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
   <attribute name="impactLevel" type="INTEGER">0</attribute>
   <attribute name="impactMessage" type="NULL"/>
-  <attribute name="lastModifiedDate" type="LONG">1532637085893</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1532793307787</attribute>
   <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
   <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
   <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
@@ -293,5 +302,7 @@ BP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
 dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8Q
 eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///
 EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb///////8=</attribute>
+  <attribute name="rbsFilterProcedure" type="STRING">/shared/LateArrivals</attribute>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Airline/L3_Application/L3_ForDeployment</attribute>
   <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1532621119578</attribute>
 </metadata>

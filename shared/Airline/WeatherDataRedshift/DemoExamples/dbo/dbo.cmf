@@ -2,6 +2,8 @@
 <metadata name="dbo" path="/shared/Airline/WeatherDataRedshift/DemoExamples/dbo" type="CONTAINER" subtype="SCHEMA" changeToken="0">
   <security>
     <owner user="admin" domain="composite"/>
+    <privilege user="datascientist" domain="composite" privileges="READ EXECUTE SELECT GRANT"/>
+    <privilege user="businessuser" domain="composite" privileges="READ EXECUTE SELECT GRANT"/>
   </security>
   <attribute name="autoAddChildren" type="BOOLEAN">false</attribute>
   <attribute name="creationDate" type="LONG">1532618434788</attribute>

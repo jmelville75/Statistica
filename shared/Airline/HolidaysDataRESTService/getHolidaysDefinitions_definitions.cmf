@@ -15,6 +15,8 @@
   </definitions>
   <security>
     <owner user="admin" domain="composite"/>
+    <privilege user="datascientist" domain="composite" privileges="READ GRANT"/>
+    <privilege user="businessuser" domain="composite" privileges="READ GRANT"/>
   </security>
   <attribute name="creationDate" type="LONG">1532614460968</attribute>
   <attribute name="creatorUserDomain" type="STRING">composite</attribute>
