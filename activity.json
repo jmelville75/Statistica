@@ -1,5 +1,5 @@
 {
-	"name": "statistica_model",
+	"name": "statistica_activity",
 	"type": "flogo:activity",
 	"ref": "github.com/jmelville75/Statistica",
 	"version": "0.0.1",
